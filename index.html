@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Create JS Function mini-project -->
+<!-- Author: Marc (MRT) -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +12,23 @@
 </head>
 <script>
 
-    /* Calculate the sum of the first 100 numbers. */
+    // Calculate the sum of the first 'upperBound' integers. 
 
-    function calcSum() {
+    function calcSum(upperBound) {
         var sum = 0;
-        for(var i = 1; i <= 100; i++) {
-            sum += i;
+
+        // Ideally check upperBound to ensure it is a positive integer value.
+        // We ignore potential overflow for excessively large summations.
+                
+        if (upperBound > 0) {
+            for(var i = 1; i <= upperBound; i++) {
+             sum += i;
+            }
         }
-        console.log("The sum of the first 100 numbers is " + sum + ".");
+        // Log summation to the browser console.
+        console.log("The sum of the first " + upperBound + " numbers is " + sum + "."); 
+             
+        return sum;
     }   
 </script>
 
@@ -24,8 +37,11 @@
 <body>
     <h1> Simple Sum JS Function</h1>
     
-    <p> Mini-project:  To compute the sum of the first 100 numbers.</p>
-    <button onclick="calcSum()">Compute Sum</button>
-
+    <!-- Note: Ideally, we input the summation upper bound from the user, but for this mini-project it is fixed to 100. -->
+  
+    <p> Mini-project:  To compute the sum of the first 100 numbers. <br>
+        (See console log for summation value)</p>
+    <button onclick="calcSum(100)">Compute Sum</button>
+  
 </body>
 </html>
