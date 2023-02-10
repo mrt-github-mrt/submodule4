@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a JS Function</title>
+</head>
+<script>
+
+    /* Calculate the sum of the first 100 numbers. */
+
+    function calcSum() {
+        var sum = 0;
+        for(var i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        console.log("The sum of the first 100 numbers is " + sum + ".");
+    }   
+</script>
+
+<!-- Invoke simple JS function to sum numbers when button clicked. -->
+
+<body>
+    <h1> Simple Sum JS Function</h1>
+    
+    <p> Mini-project:  To compute the sum of the first 100 numbers.</p>
+    <button onclick="calcSum()">Compute Sum</button>
+
+</body>
+</html>
